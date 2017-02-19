@@ -1,0 +1,11 @@
+<h2>Lista de Pessoas</h2>
+
+<input type="text" [(ngModel)]="nome">
+<button (click)="enviarNome()">Enviar Nome</button>
+<p>{{nome}}</p>
+
+<ul>
+    <li *ngFor="let pessoa of pessoas">
+        {{pessoa}}
+    </li>
+</ul>

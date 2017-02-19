@@ -1,0 +1,7 @@
+<h2>Property binding</h2>
+
+<button (click)="mostrar()">Mostrar Parafrago</button>
+
+<p [hidden]="!verParagrafo">Parafrago habilitado</p>
+<p bind-hidden="!verParagrafo">Parafrago habilitado com bind</p>
+<p hidden="!verParagrafo">Parafrago habilitado com interpolation sem []</p>

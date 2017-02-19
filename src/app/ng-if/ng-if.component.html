@@ -1,0 +1,24 @@
+<h2>*ngIf</h2>
+
+<div *ngIf="true">
+    *ngIf verdadeiro
+</div>
+
+<div *ngIf="false">
+    *ngIf falso
+</div>
+
+<p *ngIf="getValor()"> *ngIf com método</p>
+<br>
+<button (click)="mostrar()">mudar valor</button>
+
+
+<p *ngIf="cursos.length == 0">array vazio</p>
+<p *ngIf="cursos.length > 0">array cheio</p>
+<button (click)="addArray()">add no array</button>
+
+<p *ngIf="mostraTag">com uma variável</p>
+
+<p *ngIf="true">fixo na tela</p>
+
+<p [hidden]="getValor()">parágrafo com hidden</p>

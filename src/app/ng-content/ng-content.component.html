@@ -1,0 +1,23 @@
+<h2>
+    < ng-content>
+</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                <ng-content select=".titulo"></ng-content>
+            </th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>
+                <ng-content select=".corpo"></ng-content>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
