@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgIfComponent implements OnInit {
 
-  mostraTag: boolean;
+  mostraNome: boolean;
   cursos: string [] = [];
 
   constructor() { }
@@ -16,15 +16,14 @@ export class NgIfComponent implements OnInit {
   }
 
   mostrar(): void {
-    this.mostraTag = !this.mostraTag;
+    this.mostraNome = !this.mostraNome;
   }
 
   getValor(): boolean {
-    return this.mostraTag;
+    return this.mostraNome;
   }
 
-  addArray() {
+  addCurso() {
     this.cursos.push('Angular 2');
   }
-
 }

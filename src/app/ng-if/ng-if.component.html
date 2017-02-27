@@ -8,17 +8,14 @@
     *ngIf falso
 </div>
 
-<p *ngIf="getValor()"> *ngIf com método</p>
+<button (click)="mostrar()">Exibir nome da escola de treinamentos</button>
 <br>
-<button (click)="mostrar()">mudar valor</button>
+<p *ngIf="getValor()"> Treinamentos com a condicional *ngIf</p>
 
+<p *ngIf="cursos.length == 0">Não temos curso disponível</p>
+<p *ngIf="cursos.length > 0">Agora temos curso cadastrado</p>
+<button (click)="addCurso()">add novo curso</button>
 
-<p *ngIf="cursos.length == 0">array vazio</p>
-<p *ngIf="cursos.length > 0">array cheio</p>
-<button (click)="addArray()">add no array</button>
-
-<p *ngIf="mostraTag">com uma variável</p>
-
-<p *ngIf="true">fixo na tela</p>
+<p *ngIf="mostraNome">com uma variável</p>
 
 <p [hidden]="getValor()">parágrafo com hidden</p>
