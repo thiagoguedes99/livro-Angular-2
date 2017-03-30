@@ -1,0 +1,51 @@
+<p>
+    Angular 4
+</p>
+
+
+<button (click)="mudar()">Angular 4</button>
+
+<div *ngIf="troca">
+    <p>com o if</p>
+</div>
+<div *ngIf="! troca">
+    <p>com o else</p>
+</div>
+
+<div *ngIf="troca; else outro">
+    <p>com o if</p>
+</div>
+<ng-template #outro>
+    <p>com o else</p>
+</ng-template>
+
+
+<ul>
+    <li *ngFor="let item of tecnologias; let i = index">
+        {{i}} - {{item}} - {{i + 1}} de {{tecnologias.length}}
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let item of tecnologias; count as count; let i = index">
+        {{i}} - {{item}} - {{i + 1}} de {{count}}
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let item of tecnologias; count as count; index as i">
+        {{i}} - {{item}} - {{i + 1}} de {{count}}
+    </li>
+</ul>
+
+<form #cadastro="ngForm">
+    <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" #nome="ngModel" [(ngModel)]="email" name="email" email required>
+
+        <div [hidden]="nome.valid || nome.pristine">
+            <p>Email inválido</p>
+        </div>
+    </div>
+    <button type="submit" [disabled]="cadastro.form.invalid">Enviar</button>
+</form>
